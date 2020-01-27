@@ -38,9 +38,9 @@ app.post('/send', (req, res) => {
 
     // send mail with defined transport object
     await transporter.sendMail({
-        from: "Port Contact", // sender address
+        from: "Portfolio Contact", // sender address
         to: "jensenal27@gmail.com", // list of receivers
-        subject: "Port Contact Request", // Subject line
+        subject: "Portfolio Contact Request", // Subject line
         text: "Hello world?", // plain text body
         html: output // html body
     });
@@ -50,10 +50,6 @@ app.post('/send', (req, res) => {
     res.send(200);
     main().catch(console.error);
 
-});
-
-app.get('/download', (req, res) => {
-    res.download('./public/AJensenResume.pdf');
 });
 
 app.listen(process.env.PORT || 3000, () => {
